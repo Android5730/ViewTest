@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RectView">
+        <!--定义rect_color属性，它的格式为color-->
+        <attr name="rect_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TitleBar">
+        <!-- 文字颜色 -->
+        <attr name="title_text_color" format="color"/>
+        <!-- 背景颜色 -->
+        <attr name="title_bg" format="color"/>
+        <!-- 文字 -->
+        <attr name="title_text" format="string"/>
+        <!-- 文字大小 -->
+        <attr name="title_text_size" format="dimension"/>
+    </declare-styleable>
+</resources>
