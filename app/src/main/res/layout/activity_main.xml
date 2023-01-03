@@ -40,15 +40,27 @@
         app:layout_constraintStart_toStartOf="parent"/>-->
     <com.itaem.viewtest.HorzontaView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="203dp"
+        tools:layout_editor_absoluteY="-135dp">
+
         <ListView
             android:id="@+id/lv_one"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
+
         <ListView
             android:id="@+id/lv_two"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent" />
     </com.itaem.viewtest.HorzontaView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/bSBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/floatingActionsMenu_fab_style"
+        android:src="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

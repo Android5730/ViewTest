@@ -5,6 +5,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -13,7 +14,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +32,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lv_one = findViewById(R.id.lv_one);
         lv_two = findViewById(R.id.lv_two);
+        FloatingActionButton button = findViewById(R.id.bSBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+/*                BottomSheetDialog dialog = new BottomSheetDialog(MainActivity.this);
+                View view = getLayoutInflater().inflate(R.layout.dialog_bottomsheet,null);
+                dialog.setContentView(view);
+                dialog.show();*/
+                // bottomSheetDialogFragment
+                new MyBottomSheetDialogFragment().show(getSupportFragmentManager(),"dialog");
+            }
+        });
         List<String> strings = new ArrayList<>();
         for (int i = 0;i<15;i++){
             strings.add(String.valueOf(i));
